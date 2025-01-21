@@ -1,4 +1,5 @@
-import NewList from './NewList'
+import React from 'react'
+import NewList from './NewsList'
 const App = () => {
     return (
         <div>
