@@ -35,10 +35,10 @@ module.exports = {
         chunkLoading: 'jsonp', 
         // path: path.resolve('dist') // 指定打包后存放的的本地路径
         // contentBase 以前是指静态文件根目录，现在已经废弃，改为statc
-        static: path.resolve('./assets')
     },
     devServer: {
-        port: 3000
+        port: 3000,
+        static: path.resolve('./assets')
     },
     module: {
         rules: [
@@ -101,6 +101,9 @@ module.exports = {
             exposes: { // 要向外暴露那些组件
                 './NewsList': './src/NewsList', // 在host 文件里使用方式 remote/NewsList'
                 './click': './src/click' 
+            },
+            shared: {
+
             }
         })
 
